@@ -12,7 +12,6 @@
 *.html
 obsolete/*.txt
 old/
-test/
 *.png
 satysfi
 *.ttf
