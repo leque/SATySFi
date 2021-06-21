@@ -39,6 +39,7 @@ type t = {
   params : Param.t list;  (** Paramater list *)
   code : string;          (** Instruction code *)
   code_interp : string option;          (** Code for interpreter *)
+  doc: string option;
 }
 (**
    Instruction description.
@@ -63,6 +64,7 @@ val inst
   -> params:Param.t list
   -> ?code_interp:string
   -> code:string
+  -> ?doc:string
   -> string                             (** inst *)
   -> t
 (** smart constructor for {! t} *)

@@ -251,13 +251,17 @@ let gen_insttype () =
       inst;
       fields;
       pp;
+      doc;
       _
     } as def  when is_primitive def ->
       begin
         match fields with
         | [] ->
-            puts "  | Op%s" inst
-
+          puts "  | Op%s" inst;
+          begin match doc with
+            | Some d -> puts "(** %s *)" d
+            | None -> ()
+          end
         | _ :: _ ->
             failwith "[gen_insttype] fields should be empty."
       end;

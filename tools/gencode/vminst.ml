@@ -32,6 +32,7 @@ let def =
         ]
         ~is_pdf_mode_primitive:true
         ~is_text_mode_primitive:true
+        ~doc:{| 文字列の結合． |}
         ~code:{|
 make_string (s1 ^ s2)
 |}

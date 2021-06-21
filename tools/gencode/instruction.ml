@@ -45,6 +45,7 @@ type t = {
   params                 : Param.t list;
   code                   : string;
   code_interp            : string option;
+  doc: string option;
 }
 
 
@@ -65,6 +66,7 @@ let inst
     ~params
     ?code_interp
     ~code
+    ?doc
     inst =
   {
     inst;
@@ -80,6 +82,7 @@ let inst
     params;
     code_interp = opt_map trim code_interp;
     code = trim code;
+    doc;
   }
 
 
